@@ -1,0 +1,1239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Roboto;
+      }
+      /* cart 1 */
+      #content {
+        width: 265px;
+        height: 250px;
+        top: 2px;
+        background: rgba(24, 24, 26, 1);
+        color: darkgrey;
+      }
+      .banana {
+        color: white;
+      }
+      .num {
+        display: flex;
+        gap: 50px;
+      }
+      .del {
+        width: 24px;
+        height: 16px;
+        top: 317px;
+        left: 85px;
+      }
+      .para {
+        color: rgba(255, 255, 255, 0.5);
+        font: Roboto;
+        font-weight: 100;
+        font-style: thin;
+        size: 12px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+      .calculat {
+        color: white;
+        width: 96px;
+        height: 37px;
+        top: 21px;
+        left: 21px;
+        border: 1px solid rgba(255, 255, 255, 1);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .buy {
+        background: rgba(222, 199, 0, 1);
+        width: 96px;
+        height: 37px;
+        top: 354px;
+        top: 35px;
+        left: 150px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .cont {
+        color: white;
+        font-family: Roboto;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+      #content {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+      }
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+      }
+      #image {
+        display: block;
+        width: 256px;
+        height: 214px;
+      }
+      /* cart2 */
+      .content2 {
+        width: 265px;
+        height: 250px;
+        top: 2px;
+        background: rgba(24, 24, 26, 1);
+      }
+      .orange {
+        width: 52;
+        height: 19;
+        top: 236px;
+        left: 21px;
+        angle: 0 deg;
+        opacity: 1;
+
+        font-family: Roboto;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: rgba(255, 255, 255, 1);
+      }
+      .con {
+        width: 228;
+        height: 28;
+        top: 263px;
+        left: 21px;
+        font-family: Roboto;
+        font-weight: 100;
+        font-style: Thin;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .number {
+        width: 35;
+        height: 23;
+        top: 313px;
+        left: 21px;
+        opacity: 1;
+
+        font-family: Roboto;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+        color: rgba(255, 255, 255, 1);
+      }
+      .numbe {
+        width: 24px;
+        height: 16px;
+        top: 317px;
+        left: 85px;
+      }
+      .calcal {
+        color: white;
+        width: 96px;
+        height: 37px;
+        top: 354px;
+        left: 21px;
+        opacity: 1;
+        border: 1px solid rgba(255, 255, 255, 1);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .buyy {
+        background: rgba(222, 199, 0, 1);
+        width: 96px;
+        height: 37px;
+        top: 354px;
+        top: 35px;
+        left: 150px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hh {
+        display: flex;
+        justify-content: space-around;
+      }
+      .nav {
+        width: 100 vh;
+        height: 100px;
+        background-color: black;
+        color: white;
+        display: flex;
+      }
+      .content {
+        overflow: auto;
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+        align-items: center;
+        margin: auto;
+        padding: 0px 10px 0px 400px;
+      }
+      .navbar {
+        margin: 10px;
+        display: flex;
+        gap: 20px;
+      }
+      .links {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+      }
+      .para-icon {
+        color: white;
+        background-color: rgba(222, 199, 0, 1);
+        width: 40px;
+        height: 140px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 30px 0 0 30px;
+      }
+      .titell {
+        font-size: 30px;
+        font-weight: bolder;
+        padding: 20px;
+        color: rgba(255, 255, 255, 1);
+      }
+      .refer {
+        display: flex;
+        align-items: start;
+      }
+      .contain {
+        width: 1159;
+        height: 3;
+        top: 1031px;
+        left: 140px;
+        angle: 0 deg;
+        opacity: 1;
+      }
+      .rt {
+        width: 149;
+        height: 38;
+        top: 1112px;
+        left: 140px;
+        font-family: Roboto;
+        font-weight: 900;
+        font-style: Black;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+      .fot {
+        width: 200000pw;
+        height: 0px;
+        background-color: #ccc;
+        display: block;
+        margin: 0 20px;
+        opacity: 1;
+        color: rgba(23, 23, 25, 1);
+      }
+      body {
+        background-color: black;
+        color: white;
+      }
+      .bod {
+        color: rgba(255, 255, 255, 1);
+        display: flex;
+        gap: 20px;
+      }
+      .tit {
+        color: rgba(137, 136, 136, 1);
+        font-family: Roboto;
+        font-weight: 900;
+        font-style: Black;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: capitalize;
+        padding-left: 40px;
+      }
+      .bord {
+        border: 1px solid white;
+        width: 510px;
+        height: 59px;
+        top: 1499px;
+        left: 394px;
+        border-radius: 2px 2px;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+      }
+      .bor {
+        display: flex;
+      }
+      .sub {
+        border: 1px solid rgba(217, 217, 217, 1);
+        width: 149px;
+        height: 59px;
+        top: 1499px;
+        left: 904px;
+        border-radius: 2px 2px;
+        background-color: rgba(217, 217, 217, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+      }
+      .bodye {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+      .social {
+        width: 354px;
+        height: 188px;
+        top: 1427px;
+        left: 1086px;
+        opacity: 1;
+        background-color: rgba(23, 23, 25, 1);
+        align-items: center;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 10px;
+      }
+      .soci {
+        width: 92;
+        height: 19;
+        top: 1489px;
+        left: 1129px;
+        opacity: 1;
+        gap: 20px;
+
+        font-family: Roboto;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+      .icon {
+        top: 30px;
+        display: flex;
+        gap: 20px;
+      }
+      .card {
+        width: 364px;
+        height: 161px;
+        top: 1215px;
+        left: 140px;
+        opacity: 1;
+        background: rgba(54, 54, 54, 0.4);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 30px;
+      }
+      .tcee {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        flex-wrap: wrap;
+        top: 1215px;
+        left: 140px;
+        opacity: 1;
+        background-color: rgba(9, 10, 16, 1);
+      }
+      .text {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      .txt {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+      }
+      .foo {
+        background-color: black;
+        width: 100%;
+        padding: 30px 0;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .right {
+        max-width: 250px;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: left;
+      }
+      .im {
+        width: 120px;
+        height: auto;
+      }
+      .fooo {
+        display: flex;
+        gap: 10px;
+        justify-content: space-around;
+      }
+      .bob {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      section.cart {
+        padding: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 30px;
+      }
+      .fa-thin {
+        width: 48;
+        height: 35;
+        top: 40px;
+        left: 47px;
+        angle: 0 deg;
+        opacity: 1;
+        border-radius: 5px;
+        color: rgba(85, 85, 85, 1);
+      }
+      .grident {
+        width: 100%;
+        height: 100vh;
+        background-image: radial-gradient(circle, #2c2c2c, #000000);
+        position: absolute; /* مهم جداً عشان تكون خلفية */
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      .imfe {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        align-self: flex-start;
+        padding: 30px;
+      }
+      header {
+        display: flex;
+        padding: 0px 5%;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background-image: url(./416aa7c26e5c40657ec969d850ff246afcd4510e.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+      }
+      .star {
+        display: flex;
+        flex-direction: column;
+      }
+      .bar {
+        display: flex;
+        justify-content: end;
+        align-self:;
+        margin-left: 30px;
+        position: absolute;
+        right: 0px;
+      }
+      .word {
+        width: 233;
+        height: 150;
+        top: 311px;
+        left: 978px;
+        opacity: 1;
+
+        font-family: Roboto;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 64px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+      .wored {
+        width: 82;
+        height: 23;
+        top: 355px;
+        left: 1124px;
+        opacity: 1;
+
+        font-family: Sacramento;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: rgba(222, 199, 0, 1);
+      }
+      .word span:after {
+        content: "Fruit Mania";
+        font-family: Sacramento;
+        width: 82px;
+        height: 23px;
+        top: 355px;
+        left: 1124px;
+        opacity: 1;
+        font-family: Sacramento;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: rgba(222, 199, 0, 1);
+      }
+      .ope {
+        width: 219px;
+        height: 204px;
+        top: 696px;
+        left: 142px;
+        opacity: 1;
+        color: rgba(79, 79, 186, 1);
+      }
+      .vrt {
+        width: 1440px;
+        height: 204px;
+        top: 696px;
+        display: flex;
+        background-image:
+          linear-gradient(0deg, rgba(23, 23, 25, 0.8), rgba(23, 23, 25, 0.8)),
+          radial-gradient(
+            130.88% 204.15% at 43.33% 130.88%,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
+      }
+      .orang {
+        width: 52;
+        height: 19;
+        top: 725px;
+        left: 398px;
+        font-family: Roboto;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+      }
+      .par {
+        width: 173;
+        height: 42;
+        top: 749px;
+        left: 398px;
+        font-family: Roboto;
+        font-weight: 100;
+        font-style: Thin;
+        font-size: 12px;
+        leading-trim: NONE;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: rgba(255, 255, 255, 1);
+      }
+      .gap {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        row-gap: 20px;
+      }
+      .crt {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .containee {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+      }
+      .crte {
+        margin: 20px;
+        width: 43px;
+        height: 11px;
+        top: 862px;
+        left: 484px;
+        opacity: 1;
+        display: flex;
+        gap: 30px;
+        align-self: center;
+      }
+      .bopo {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .uouou {
+        display: flex;
+        align-items: center;
+        background-image:
+          linear-gradient(0deg, rgba(23, 23, 25, 0.8), rgba(23, 23, 25, 0.8)),
+          radial-gradient(
+            130.88% 204.15% at 43.33% 130.88%,
+            rgba(255, 255, 255, 0.05) 0%,
+            rgba(0, 0, 0, 0) 100%
+          );
+      }
+      /* section.cart {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 280px);
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        gap: 20px;
+        max-width: 1200px;
+      } */
+      section.cart {
+        display: grid;
+        /* التعديل هنا: الأعمدة عرضها ثابت (280px مثلاً) وموزعة في النص */
+        grid-template-columns: repeat(auto-fit, 280px);
+        justify-content: center; /* ده اللي هيلمهم في نص الشاشة بالظبط */
+        gap: 70px; /* مسافة شيك بين الكروت */
+        padding: 40px 20px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <i class="fa-thin fa-align-justify"></i>
+      <nav class="navbar">
+        <img src="./Group 6.png" alt="" />
+      </nav>
+      <nav class="nav content">
+        <p>favorite fruites</p>
+        <p>favorite shoop</p>
+        <p>about As</p>
+      </nav>
+      <nav class="links">
+        <div class="nav-links">
+          <i class="fa-solid fa-suitcase"></i>
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </div>
+      </nav>
+    </nav>
+
+    <header>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+      />
+      <div class="grident"></div>
+      <nav class="imfe">
+        <h2>01/02</h2>
+        <h2>Ananas</h2>
+        <p>
+          Amet minim mollit non deserunt <br />
+          ullamco est sit aliqua dolor do amet <br />
+          sint.
+        </p>
+      </nav>
+      <nav class="star">
+        <h2 class="word">
+          <span>Fruit </span><br />
+          Delivery
+        </h2>
+        <p>
+          Amet minim mollit non deserunt ullamco est sit <br />
+          aliqua dolor do amet sint. Velit officia consequat <br />
+          duis enim velit mollit. Exercitation veniam <br />
+          consequat sunt nostrud amet.
+        </p>
+      </nav>
+      <nav class="bar">
+        <p class="para-icon">
+          <i class="fa-regular fa-camera"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </p>
+      </nav>
+    </header>
+
+    <section class="uouou">
+      <div class="vrt">
+        <img
+          class="ope"
+          src="./5540368f79a4449e36edb295c54bd4acdae9a187.jpg"
+          alt=""
+        />
+        <div class="containee">
+          <div class="crt">
+            <h2 class="orang">Orange</h2>
+            <p class="par">
+              Amet minim mollit non deserunt <br />ullamco est sit aliqua dolor
+              do
+              <br />
+              amet sint.
+            </p>
+            <br />
+            <p class="par">Amet minim mollit non deserunt ullamco</p>
+            <img class="crte" src="./Group 8.png" alt="" />
+          </div>
+          <div class="bopo">
+            <div class="gap">
+              <h2>39$</h2>
+              <del>59$</del>
+            </div>
+            <div class="buy">
+              <p>BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vrt">
+        <img
+          class="ope"
+          src="./044a9aaacab833c0b05e30d71d1d4af90b3ea237.jpg"
+          alt=""
+        />
+        <div class="containee">
+          <div class="crt">
+            <h2 class="orang">Melons</h2>
+            <p class="par">
+              Amet minim mollit non deserunt <br />ullamco est sit aliqua dolor
+              do
+              <br />
+              amet sint.
+            </p>
+            <br />
+            <p class="par">Amet minim mollit non deserunt ullamco</p>
+            <img class="crte" src="./Group 8.png" alt="" />
+          </div>
+          <div class="bopo">
+            <div class="gap">
+              <h2>39$</h2>
+              <del>59$</del>
+            </div>
+            <div class="buy">
+              <p>BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="title">
+      <div>
+        <h2 class="titell">favorit fruites</h2>
+      </div>
+      <div class="bob">
+        <h2>More</h2>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
+    <hr class="contain" />
+
+    <section class="cart">
+      <!-- دا سيكشن الكروت -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./1923d67bd4a0cc68fc9e47267f776ae1b40d9283.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">Banana</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">39$</strong>
+            <del class="del">55$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./c1d7e19fc4aa6b0f4fdb04289de189e42f376c1a.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">orange</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">20$</strong>
+            <del class="del">30$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./aa64deeec592e1654a787bb670f83680e6fcc546.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">pinaple</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">32$</strong>
+            <del class="del">35$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./b4bf7e133074f57fc7a6d780e03bd42c9556b455.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">apple</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">20$</strong>
+            <del class="del">25$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- titel the first fruit -->
+      <!-- <div>
+        <h1>fruit shoop</h1>
+      </div>
+      <hr /> -->
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./150c50f9a6de7109be8fae1510596edff2553401.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">Banana</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">39$</strong>
+            <del class="del">55$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./fb170bb0c395abcd640c7661f6425f40d1d99f2b.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">orange</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">20$</strong>
+            <del class="del">30$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./87f03453e9c97477bfa924d7f99a7acad12f01e0.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">pinaple</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">32$</strong>
+            <del class="del">35$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./8921646aa10f59a07121b7df947f5536a70ffd36.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">apple</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">12$</strong>
+            <del class="del">20$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./e78fede1242b3808e314c833bcc2a1ace9a84706.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">cherry</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">39$</strong>
+            <del class="del">55$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./08b3edb67fca01181c73bb063f88b6a1b072b2ff.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">melon</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">20$</strong>
+            <del class="del">30$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./1b506c8004901bc9faec3d14f02fb3860a970442.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">strawberries</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">32$</strong>
+            <del class="del">35$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD -->
+      <div class="card1">
+        <div id="image">
+          <img
+            src="./1f439c14c4fc55a4df215c37189e0e8b4bda955c.jpg"
+            width="265px"
+            height="214px"
+            alt="مظهرتش"
+          />
+        </div>
+        <div id="content">
+          <b class="banana">avocado</b>
+          <p class="para">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint.
+          </p>
+          <div class="num">
+            <strong style="color: white">31$</strong>
+            <del class="del">35$</del>
+          </div>
+          <div class="boxes">
+            <div class="calculat">
+              <p>+</p>
+              <p>1</p>
+              <p>-</p>
+            </div>
+            <div class="buy">
+              <p class="cont">BUY NOW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tcee">
+      <div class="txt">
+        <div class="text">
+          <h2>About Us</h2>
+          <!-- <img src="./Group 29.png" alt="مظهرتش" /> -->
+          <div class="sham">
+            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </div>
+        <hr class="fot" />
+      </div>
+      <div class="fooo">
+        <div class="card">
+          <div>
+            <img src="./Group 26.png" alt="مظهرتش" />
+          </div>
+          <h2>Maria</h2>
+          <p>
+            Amet minim mollit non deserunt ullamco <br />
+            est sit aliqua dolor do amet sint.
+          </p>
+        </div>
+        <div class="card">
+          <div>
+            <img src="./Group 27.png" alt="مظهرتش" />
+          </div>
+          <h2>Anna</h2>
+          <p>
+            Amet minim mollit non deserunt ullamco <br />
+            est sit aliqua dolor do amet sint.
+          </p>
+        </div>
+        <div class="card">
+          <div>
+            <img src="./Group 28.png" alt="مظهرتش" />
+          </div>
+          <h2>Jessica</h2>
+          <p>
+            Amet minim mollit non deserunt ullamco <br />
+            est sit aliqua dolor do amet sint.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bodye">
+      <div class="bod">
+        <p class="tit" ;>Subscribe <br />to newsletter</p>
+      </div>
+      <div class="bor">
+        <p class="bord">join</p>
+        <p class="sub">subscribe</p>
+      </div>
+      <div class="social">
+        <h2 class="soci">Social Media</h2>
+        <div class="icon">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="foo">
+      <nav class="navbar">
+        <img src="./Group 6.png" alt="مظهرتش" class="im" />
+        <h4>Best Fruits</h4>
+        <h4>Social Media</h4>
+        <h4>More for You</h4>
+        <h4>YourShoop</h4>
+        <h4 class="right">The Copyright 2022 guide covers 14 jurisdictions</h4>
+      </nav>
+    </section>
+  </body>
+</html>
